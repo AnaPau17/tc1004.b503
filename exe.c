@@ -5,9 +5,9 @@ int main(){
     int pid=fork();
     if(pid == 0){
         printf("soy el hijo \n");
-        execl("./hola","hola","pedro","luis","mary",(char *)NULL);
+        execl("./fork","hola","pedro","luis","mary",(char *)NULL);
         printf("ESTA LINEA NO DEBE EJECUTARSE");
     }
-        printf("soy el proceso padre\n");
-        return 0;
+    printf("soy el proceso padre\n");
+    return 0;
 }
