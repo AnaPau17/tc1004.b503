@@ -3,7 +3,7 @@
 
 void * printHello(void *arg){
     int hid= *(int *)arg; //el asterisco antes de la dirección devuelve el contenido 
-    printf("hola desde el hilo\n", hid);
+    printf("hola desde el hilo\n", hid); 
     pthread_exit(NULL);
 }
 
