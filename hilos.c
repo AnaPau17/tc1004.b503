@@ -2,8 +2,8 @@
 #include <pthread.h>
 
 void * printHello(void *arg){
-    int hid= *(int *)arg; //el asterisco antes de la dirección devuelve el contenido 
-    printf("hola desde el hilo\n", hid); 
+    int hid= *((int *)arg); //el asterisco antes de la dirección devuelve el contenido 
+    printf("hola desde el hilo %d\n", hid); 
     pthread_exit(NULL);
 }
 
@@ -16,5 +16,5 @@ int main(){
         pthread_create(&threadStatus[i],NULL, printHello,(void *)&hids[i]); 
     }
     pthread_exit(NULL);
-    printf("hola desde 1 main\n");
+    printf("hola desde el main\n");
 }
